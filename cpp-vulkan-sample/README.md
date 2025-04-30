@@ -19,12 +19,14 @@ Assuming your nix shell is configured correctly from the previous step, you shou
 ```sh
 #Debug build
 cmake -B build/debug -DCMAKE_BUILD_TYPE=Debug
-cmake --build build/debug --target -hello
+cmake --build build/debug --target vulkan-hello
 
 # Release build
 cmake -B build/release -DCMAKE_BUILD_TYPE=Release
-cmake --build build/release --target hello
+cmake --build build/release --target vulkan-hello
 ```
+
+Note that to debug using this launch configuration in vscode you'll need the CodeLLDB extension.
 
 ## Configuring VSCode
 
