@@ -23,3 +23,17 @@ cmake ..
 make
 ./hello
 ```
+
+## Configuring VSCode
+
+Ideally if you cd into this directory and run 
+```sh
+nix develop
+code .
+```
+VSCode should just automatically detect the compiler tooling (you may need to click "scan")
+
+If this doesn't work you may need to configure VSCode to point to the nix provider compiler toolchain: use the following commands to find out where the compiler is pulled from, and then point your IDE to the path found
+```sh
+which clang
+```
